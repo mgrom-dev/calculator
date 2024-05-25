@@ -1,5 +1,3 @@
-package homework;
-
 /**
  * Написать класс Калькулятор (необобщенный), который содержит обобщенные
  * статические методы: sum(), multiply(), divide(), subtract(). Параметры этих
@@ -7,24 +5,20 @@ package homework;
  * операция. Методы должны возвращать результат своей работы.
  */
 public class Calculator {
-    @SuppressWarnings("unchecked")
-    public static <T extends Number, V extends Number> T sum(T a, V b) {
-        return (T) (Double) Double.sum(a.doubleValue(), b.doubleValue());
+    public static <T extends Number, V extends Number> Double sum(T a, V b) {
+        return Double.sum(a.doubleValue(), b.doubleValue());
     }
 
-    @SuppressWarnings("unchecked")
-    public static <T extends Number, V extends Number> T multiply(T a, V b) {
-        return (T) (Double) (a.doubleValue() * b.doubleValue());
+    public static <T extends Number, V extends Number> Double multiply(T a, V b) {
+        return a.doubleValue() * b.doubleValue();
     }
 
-    @SuppressWarnings("unchecked")
-    public static <T extends Number, V extends Number> T divide(T a, V b) {
-        return (T) (Double) (a.doubleValue() / b.doubleValue());
+    public static <T extends Number, V extends Number> Double divide(T a, V b) {
+        return a.doubleValue() / b.doubleValue();
     }
 
-    @SuppressWarnings("unchecked")
-    public static <T extends Number, V extends Number> T subtract(T a, V b) {
-        return (T) (Double) (a.doubleValue() - b.doubleValue());
+    public static <T extends Number, V extends Number> Double subtract(T a, V b) {
+        return a.doubleValue() - b.doubleValue();
     }
 
     public static void main(String[] args) {

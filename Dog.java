@@ -1,5 +1,3 @@
-package homework;
-
 public class Dog extends Animal{
 
     private String name;
